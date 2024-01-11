@@ -12,7 +12,7 @@ function StepIcon({ step, checked, outline }: StepIconProps) {
       className={cn(
         'w-10 h-10 rounded-full flex items-center justify-center text-white',
         step && !outline && 'bg-primary',
-        checked && !outline && 'bg-accent',
+        checked && !outline && 'bg-[#85BF55]',
         outline && step && 'border-2 border-primary text-primary',
       )}>
       {checked && <Check className='w-6 h-6' />}

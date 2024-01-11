@@ -13,16 +13,22 @@ function App() {
       <Header />
       <div className='container mx-auto h-full'>
         <div className='w-full flex flex-col items-center gap-4'>
-          <h1 className='text-5xl'>Wait ! your order in progress.</h1>
+          <h1 className='text-5xl text-black'>
+            Wait ! your order in progress.
+          </h1>
           <p className='text-2xl font-light'>
             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing
           </p>
         </div>
         <StepsBar />
-        <div className='flex gap-8 bg-[#FAFAFA] p-10'>
-          <div className='flex flex-col gap-6'>
+        <div className='flex gap-8 bg-[#FAFAFA] p-10 rounded-md'>
+          <div className='flex max-w-[575px] flex-col gap-6'>
             <div className='flex-grow bg-red-500'>
-              {/*<img src={itemPreview} alt='Item Preview' />*/}
+              <img
+                className='w-full h-full object-cover'
+                src={itemPreview}
+                alt='Item Preview'
+              />
             </div>
             <ReviewBox />
           </div>

@@ -21,8 +21,8 @@ const headerItems = [
 
 export function HeaderBar() {
   return (
-    <div className='bg-primaryDark w-full h-[50px] text-white '>
-      <div className='container mx-auto h-full flex justify-evenly items-center'>
+    <div className='bg-primaryDark w-full h-[50px] text-white font-light'>
+      <div className='container mx-auto h-full flex justify-between items-center'>
         {headerItems.map((item, index) => (
           <div key={index} className='flex items-center justify-center'>
             <div className='mr-2'>{item.icon}</div>

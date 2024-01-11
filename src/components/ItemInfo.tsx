@@ -2,19 +2,19 @@ import itemPreview from '../assets/images/item-preview-small.png'
 import stars from '../assets/images/stars.png'
 import paymentOptions from '../assets/images/payment-options.png'
 import guarantee from '../assets/images/guarantee.png'
-import { ArrowRight, Check, PercentCircle } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import { Icons } from './ui/Icons.tsx'
 
 export function ItemInfo() {
   return (
     <div className='flex flex-col gap-8'>
-      <p>
-        <span className='text-primary'>ONE TIME ONLY</span> special price for 6
-        extra Clarifion for only
+      <p className='text-[32px] leading-[1.4] text-black'>
+        <span className='text-primary'>ONE TIME ONLY</span> Special Price For 6
+        Extra Clarifion For Only
         <span className='text-primary'>$14</span> each ($84.00 total!)
       </p>
       <div className='flex gap-6'>
-        <div className='bg-primary w-fit h-fit rounded-md'>
+        <div className='bg-primary min-w-[134px] min-h-[134px] w-[134px] h-[134px] rounded-md'>
           <img src={itemPreview} alt='item preview small' />
         </div>
         <div className='flex flex-col justify-between'>
@@ -22,7 +22,9 @@ export function ItemInfo() {
             <h3>Clarifion Air Ionizer</h3>
             <div className='flex items-center gap-2'>
               <p>$180</p>
-              <span className='text-primary font-bold'>$84</span>
+              <span className='text-primary text-[22px] font-semibold'>
+                $84
+              </span>
             </div>
           </div>
           <div>
@@ -38,22 +40,22 @@ export function ItemInfo() {
           </p>
         </div>
       </div>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 leading-[1.6]'>
         <div className='flex gap-3 items-center'>
-          <Check className='w-[22px] h-[22px] stroke-primary' />
+          <Check className='w-6 h-6 stroke-primary' />
           <p>
             Negative Ion Technology may{' '}
             <span className='font-bold'>help with allergens</span>
           </p>
         </div>
         <div className='flex gap-3 items-center'>
-          <Check className='w-[22px] h-[22px] stroke-primary' />
+          <Check className='w-6 h-6  stroke-primary' />
           <p>
             Designed for <span className='font-bold'>air rejuvenation</span>
           </p>
         </div>
         <div className='flex gap-3 items-center'>
-          <Check className='w-[22px] h-[22px] stroke-primary' />
+          <Check className='w-6 h-6 stroke-primary' />
           <p>
             <span className='font-bold'>Perfect for every room</span> in all
             types of places
@@ -91,7 +93,7 @@ export function ItemInfo() {
       </div>
       <div className='flex gap-4 items-center'>
         <img src={guarantee} alt='guarantee' />
-        <p className='leading-[1.4]'>
+        <p>
           If you are not completely thrilled with your Clarifion - We have a{' '}
           <span className='font-bold'>30 day satisfaction guarantee.</span>{' '}
           Please refer to our return policy at the bottom of the page for more

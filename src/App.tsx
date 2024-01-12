@@ -1,10 +1,10 @@
-import { HeaderBar } from './components/HeaderBar.tsx'
-import { Header } from './components/Header.tsx'
-import { Footer } from './components/Footer.tsx'
-import { StepsBar } from './components/StepsBar.tsx'
-import { ItemInfo } from './components/ItemInfo.tsx'
-import { ReviewBox } from './components/ReviewBox.tsx'
-import itemPreview from './assets/images/item-preview-large.png'
+import { HeaderBar } from '@/components/HeaderBar.tsx'
+import { Header } from '@/components/Header.tsx'
+import { Footer } from '@/components/Footer.tsx'
+import { StepsBar } from '@/components/StepsBar.tsx'
+import { ItemInfo } from '@/components/ItemInfo.tsx'
+import { ReviewBox } from '@/components/ReviewBox.tsx'
+import itemPreview from '@/assets/images/item-preview-large.png'
 
 function App() {
   return (

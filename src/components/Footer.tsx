@@ -1,4 +1,4 @@
-import { Icons } from './ui/Icons'
+import { Icons } from '@/components/ui/Icons'
 
 export function Footer() {
   return (

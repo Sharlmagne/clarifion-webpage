@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react'
-import { cn } from '../lib/util.ts'
+import { cn } from '@/lib/util'
 import React from 'react'
 
 type StepIconProps = {

@@ -1,4 +1,4 @@
-import { Icons } from './ui/Icons'
+import { Icons } from '@/components/ui/Icons'
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 

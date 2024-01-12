@@ -1,5 +1,5 @@
-import profile from '../assets/images/profile.png'
-import starsSmall from '../assets/images/stars-small-2.png'
+import profile from '@/assets/images/profile.png'
+import starsSmall from '@/assets/images/stars-small-2.png'
 import { BadgeCheck } from 'lucide-react'
 
 export function ReviewBox() {

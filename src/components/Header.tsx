@@ -1,6 +1,6 @@
-import clarifion from '../assets/images/clarifion-logo.png'
-import mcafeeMed from '../assets/images/mcafee-med.png'
-import nortonMed from '../assets/images/norton-med.png'
+import clarifion from '@/assets/images/clarifion-logo.png'
+import mcafeeMed from '@/assets/images/mcafee-med.png'
+import nortonMed from '@/assets/images/norton-med.png'
 
 export function Header() {
   return (

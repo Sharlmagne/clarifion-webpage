@@ -1,11 +1,20 @@
 import { Check } from 'lucide-react'
 import { cn } from '../lib/util.ts'
+import React from 'react'
 
 type StepIconProps = {
   step?: number
   checked?: boolean
   outline?: boolean
 }
+
+type StepItemProps = {
+  icon: React.ReactNode
+  step: number
+  children: React.ReactNode
+  highlighted?: boolean
+}
+
 function StepIcon({ step, checked, outline }: StepIconProps) {
   return (
     <div
@@ -21,25 +30,37 @@ function StepIcon({ step, checked, outline }: StepIconProps) {
   )
 }
 
+function StepItem({ icon, step, children, highlighted }: StepItemProps) {
+  return (
+    <div className='flex flex-col text-center items-center gap-2 lg:flex-row lg:gap-4'>
+      {icon}
+      <p
+        className={cn(
+          'text-md whitespace-nowrap flex flex-col lg:text-xl lg:flex-row gap-1',
+          highlighted && 'font-bold',
+        )}>
+        <span className='hidden lg:block'>{`Step ${step}:`}</span>
+        {children}
+      </p>
+    </div>
+  )
+}
+
 export function StepsBar() {
   return (
-    <div className='flex justify-between mt-16 mb-10'>
-      <div className='flex items-center gap-4'>
-        <StepIcon checked />
-        <p className='text-xl'>Step 1: Cart Review</p>
-      </div>
-      <div className='flex items-center gap-4'>
-        <StepIcon checked />
-        <p className='text-xl'>Step 2: Checkout</p>
-      </div>
-      <div className='flex items-center gap-4'>
-        <StepIcon step={3} />
-        <p className='text-xl font-bold'>Step 3: Special Offer</p>
-      </div>
-      <div className='flex items-center gap-4'>
-        <StepIcon step={4} outline />
-        <p className='text-xl'>Step 4: Confirmation</p>
-      </div>
+    <div className='flex justify-between my-8 lg:mt-16 lg:mb-10'>
+      <StepItem icon={<StepIcon checked />} step={1}>
+        Cart Review
+      </StepItem>
+      <StepItem icon={<StepIcon checked />} step={2}>
+        Checkout
+      </StepItem>
+      <StepItem icon={<StepIcon step={3} />} step={3} highlighted>
+        Special Offer
+      </StepItem>
+      <StepItem icon={<StepIcon step={4} outline />} step={4}>
+        Confirmation
+      </StepItem>
     </div>
   )
 }

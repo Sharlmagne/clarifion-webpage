@@ -8,11 +8,11 @@ import itemPreview from './assets/images/item-preview-large.png'
 
 function App() {
   return (
-    <>
+    <div className='h-full flex flex-col'>
       <HeaderBar />
       <Header />
-      <div className='container mx-auto h-full'>
-        <div className='w-full flex flex-col items-center gap-4'>
+      <div className='lg:container mx-auto px-8 md h-fit flex-grow'>
+        <div className='mt-10 w-full flex flex-col items-center text-center gap-4 lg:mt-0'>
           <h1 className='text-5xl text-black'>
             Wait ! your order in progress.
           </h1>
@@ -22,8 +22,8 @@ function App() {
         </div>
         <StepsBar />
         <div className='flex gap-8 bg-[#FAFAFA] p-10 rounded-md'>
-          <div className='flex max-w-[575px] flex-col gap-6'>
-            <div className='flex-grow bg-red-500'>
+          <div className='hidden lg:flex max-w-[575px] flex-col gap-6 '>
+            <div className='flex-grow'>
               <img
                 className='w-full h-full object-cover'
                 src={itemPreview}
@@ -36,7 +36,7 @@ function App() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

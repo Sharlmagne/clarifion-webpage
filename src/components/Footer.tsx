@@ -2,8 +2,8 @@ import { Icons } from './ui/Icons'
 
 export function Footer() {
   return (
-    <div className='px-16 bg-primaryDark h-[88px] text-white w-full font-light'>
-      <div className='container mx-auto h-full flex items-center justify-between'>
+    <div className='px-16 bg-primaryDark py-8 text-white w-full font-light'>
+      <div className='container mx-auto flex flex-col gap-8 items-center lg:flex-row lg:justify-between '>
         <div className='flex items-center gap-4'>
           <p>Copyright (c) 2023</p>
           <div className='bg-white h-6 w-[1px]' />

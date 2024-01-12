@@ -4,7 +4,7 @@ import nortonMed from '../assets/images/norton-med.png'
 
 export function Header() {
   return (
-    <div className='container mx-auto flex justify-between py-[30px]'>
+    <div className='w-full mx-auto flex justify-between py-[30px] px-8 lg:container '>
       <div>
         <img src={clarifion} alt='Logo' />
       </div>

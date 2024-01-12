@@ -1,4 +1,5 @@
-import itemPreview from '../assets/images/item-preview-small.png'
+import itemPreviewSmall from '../assets/images/item-preview-small.png'
+import itemPreviewLarge from '../assets/images/item-preview-large.png'
 import stars from '../assets/images/stars.png'
 import paymentOptions from '../assets/images/payment-options.png'
 import guarantee from '../assets/images/guarantee.png'
@@ -8,16 +9,21 @@ import { Icons } from './ui/Icons.tsx'
 export function ItemInfo() {
   return (
     <div className='flex flex-col gap-8'>
-      <p className='text-[32px] leading-[1.4] text-black'>
+      <p className='leading-[1.4] text-[32px] text-black text-center lg:text-start'>
         <span className='text-primary'>ONE TIME ONLY</span> Special Price For 6
         Extra Clarifion For Only
         <span className='text-primary'>$14</span> each ($84.00 total!)
       </p>
+      <img
+        className='object-cover lg:hidden'
+        src={itemPreviewLarge}
+        alt='Item Preview'
+      />
       <div className='flex gap-6'>
         <div className='bg-primary min-w-[134px] min-h-[134px] w-[134px] h-[134px] rounded-md'>
-          <img src={itemPreview} alt='item preview small' />
+          <img src={itemPreviewSmall} alt='item preview small' />
         </div>
-        <div className='flex flex-col justify-between'>
+        <div className='flex flex-col justify-between w-full'>
           <div className='flex justify-between items-center'>
             <h3>Clarifion Air Ionizer</h3>
             <div className='flex items-center gap-2'>
@@ -77,7 +83,7 @@ export function ItemInfo() {
           <span>YES - CLAIM MY DISCOUNT</span>
           <ArrowRight className='w-4 h-4' />
         </button>
-        <div className='flex py-2 px-4 items-center justify-center gap-4 text-[12px] border border-gray-300 rounded-md'>
+        <div className='w-full flex py-2 px-4 items-center justify-center gap-4 text-[12px] border border-gray-300 rounded-md whitespace-nowrap'>
           <p>Free Shipping</p>
           <div className='h-6 w-[1px] bg-gray-300' />
           <div className='flex items-center gap-4'>
@@ -85,7 +91,11 @@ export function ItemInfo() {
             <p>Secure 256-bit SSL encryption.</p>
           </div>
           <div className='h-6 w-[1px] bg-gray-300' />
-          <img src={paymentOptions} alt='Payment Options' />
+          <img
+            className='hidden lg:block'
+            src={paymentOptions}
+            alt='Payment Options'
+          />
         </div>
         <a href='/' className='text-red-500 underline mt-2 text-[18px]'>
           NO THANKS, I DON'T WANT THIS.

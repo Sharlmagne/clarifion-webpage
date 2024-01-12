@@ -17,9 +17,15 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      colors: {
+        primary: 'hsla(216, 94%, 57%, 1)',
+        primaryDark: 'hsla(215, 24%, 19%, 1)',
+        primaryLight: 'hsla(217, 79%, 96%, 1)',
+        accent: 'hsla(108, 44%, 47%, 1)',
+        grayText: '#4D5254',
+      },
       fontFamily: {
-        heading: ['Crete Round', 'Roboto', 'sans-serif'],
-        body: ['Inter', 'Roboto', 'sans-serif'],
+        custom: ['Manrope', 'sans-serif'],
       },
     },
   },

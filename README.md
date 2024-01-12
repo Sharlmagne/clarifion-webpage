@@ -1,6 +1,6 @@
 # Clarifion Webpage Mockup
 Sharlmagne Henry 
-Link to the project: https://clarifion-mockup.netlify.app/
+Link to the project: https://clarifion-sharlmagne-henry.netlify.app/
 
 ### Tech Stack - React + TypeScript + Vite
 

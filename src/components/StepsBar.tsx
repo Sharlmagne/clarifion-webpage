@@ -19,7 +19,7 @@ function StepIcon({ step, checked, outline }: StepIconProps) {
   return (
     <div
       className={cn(
-        'w-10 h-10 rounded-full flex items-center justify-center text-white',
+        'w-8 h-8 rounded-full flex items-center justify-center text-white md:w-10 md:h-10 ',
         step && !outline && 'bg-primary',
         checked && !outline && 'bg-[#85BF55]',
         outline && step && 'border-2 border-primary text-primary',
@@ -36,7 +36,7 @@ function StepItem({ icon, step, children, highlighted }: StepItemProps) {
       {icon}
       <p
         className={cn(
-          'text-md whitespace-nowrap flex flex-col lg:text-xl lg:flex-row gap-1',
+          'text-sm sm:text-lg whitespace-nowrap flex flex-col lg:text-xl lg:flex-row gap-1',
           highlighted && 'font-bold',
         )}>
         <span className='hidden lg:block'>{`Step ${step}:`}</span>

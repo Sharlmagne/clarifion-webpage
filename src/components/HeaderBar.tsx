@@ -42,13 +42,13 @@ export function HeaderBar() {
   }
 
   return (
-    <div className='bg-primaryDark w-full py-2 text-white font-light lg:py-4'>
+    <div className='fixed top-0 bg-primaryDark w-full py-2 text-white font-light lg:py-4'>
       <div className='hidden px-8 container mx-auto lg:flex justify-between items-center'>
         {headerItems.map((item, index) => (
           <HeaderItem icon={item.icon} text={item.text} key={index} />
         ))}
       </div>
-      <div className='px-8 flex text-sm justify-between items-center lg:hidden'>
+      <div className='px-4 flex text-sm justify-between items-center sm:px-8 lg:hidden'>
         <button onClick={prevHeaderItem} disabled={currentHeaderItem === 0}>
           <ChevronLeft size={28} />
         </button>

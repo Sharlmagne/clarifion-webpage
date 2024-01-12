@@ -11,17 +11,17 @@ function App() {
     <div className='h-full flex flex-col'>
       <HeaderBar />
       <Header />
-      <div className='lg:container mx-auto px-8 md h-fit flex-grow'>
+      <div className='mb-16 mx-auto px-4 md h-fit flex-grow lg:container sm:px-8'>
         <div className='mt-10 w-full flex flex-col items-center text-center gap-4 lg:mt-0'>
-          <h1 className='text-5xl text-black'>
+          <h1 className='text-4xl text-black lg:text-5xl'>
             Wait ! your order in progress.
           </h1>
-          <p className='text-2xl font-light'>
+          <p className='text-xl font-light lg:text-2xl'>
             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing
           </p>
         </div>
         <StepsBar />
-        <div className='flex gap-8 bg-[#FAFAFA] p-10 rounded-md'>
+        <div className='flex gap-8 lg:bg-[#FAFAFA] lg:p-10 rounded-md'>
           <div className='hidden lg:flex max-w-[575px] flex-col gap-6 '>
             <div className='flex-grow'>
               <img

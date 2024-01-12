@@ -56,7 +56,6 @@ h1 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 
@@ -65,3 +64,10 @@ h1 {
     color: #747bff;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  img {
+    height: 75%;
+  }
+}
+

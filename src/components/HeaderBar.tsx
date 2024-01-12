@@ -1,4 +1,6 @@
 import { Icons } from './ui/Icons'
+import { useState } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const headerItems = [
   {
@@ -19,16 +21,46 @@ const headerItems = [
   },
 ]
 
-export function HeaderBar() {
+function HeaderItem({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className='bg-primaryDark w-full h-[50px] text-white font-light'>
-      <div className='container mx-auto h-full flex justify-between items-center'>
+    <div className='flex items-center justify-center'>
+      <div className='mr-2'>{icon}</div>
+      <div className='whitespace-nowrap'>{text}</div>
+    </div>
+  )
+}
+
+export function HeaderBar() {
+  const [currentHeaderItem, setCurrentHeaderItem] = useState(0)
+
+  function nextHeaderItem() {
+    setCurrentHeaderItem((prevState) => prevState + 1)
+  }
+
+  function prevHeaderItem() {
+    setCurrentHeaderItem((prevState) => prevState - 1)
+  }
+
+  return (
+    <div className='bg-primaryDark w-full py-2 text-white font-light lg:py-4'>
+      <div className='hidden px-8 container mx-auto lg:flex justify-between items-center'>
         {headerItems.map((item, index) => (
-          <div key={index} className='flex items-center justify-center'>
-            <div className='mr-2'>{item.icon}</div>
-            <div className='whitespace-nowrap'>{item.text}</div>
-          </div>
+          <HeaderItem icon={item.icon} text={item.text} key={index} />
         ))}
+      </div>
+      <div className='px-8 flex text-sm justify-between items-center lg:hidden'>
+        <button onClick={prevHeaderItem} disabled={currentHeaderItem === 0}>
+          <ChevronLeft size={28} />
+        </button>
+        <HeaderItem
+          icon={headerItems[currentHeaderItem].icon}
+          text={headerItems[currentHeaderItem].text}
+        />
+        <button
+          onClick={nextHeaderItem}
+          disabled={headerItems.length === currentHeaderItem + 1}>
+          <ChevronRight size={28} />
+        </button>
       </div>
     </div>
   )
